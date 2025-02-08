@@ -171,9 +171,12 @@ function! vim_gtags#gtags#init() abort
 
     set nocscoperelative
 
-    "Hotkey for gtags-cscope
+    " Hotkey for gtags-cscope
+	" 查看定义处
 	nnoremap <C-]> :GtagsCursor<CR>
-	nnoremap <C-[> :pop<CR>
+
+	" 查看引用处
+	nmap <C-s> :Gtags -r <C-R>=expand('<cword>')<CR><CR>
 
     "Command list
     command! -nargs=0 GenGTAGS call s:gtags_db_gen()
