@@ -171,16 +171,8 @@ function! vim_gtags#gtags#init() abort
     set nocscoperelative
 
     "Hotkey for gtags-cscope
-    if g:vim_gtags#gtags_default_map == 1
-        nmap <C-\>c :cs find c <C-R>=expand('<cword>')<CR><CR>
-        nmap <C-\>d :cs find d <C-R>=expand('<cword>')<CR><CR>
-        nmap <C-\>e :cs find e <C-R>=expand('<cword>')<CR><CR>
-        nmap <C-\>f :cs find f <C-R>=expand('<cfile>')<CR><CR>
-        nmap <C-\>g :cs find g <C-R>=expand('<cword>')<CR><CR>
-        nmap <C-\>i :cs find i <C-R>=expand('<cfile>')<CR><CR>
-        nmap <C-\>s :cs find s <C-R>=expand('<cword>')<CR><CR>
-        nmap <C-\>t :cs find t <C-R>=expand('<cword>')<CR><CR>
-    endif
+	nnoremap <C-]> :GtagsCursor<CR>
+	nnoremap <C-[> :pop<CR>
 
     "Command list
     command! -nargs=0 GenGTAGS call s:gtags_db_gen()
