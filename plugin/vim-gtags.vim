@@ -13,7 +13,7 @@ if !exists('g:vim_gtags#global_bin')
 endif
 
 "Initial gtags support
-if !get(g:, 'loaded_gentags#gtags', 0)
+if !get(g:, 'loaded_vim_gtags#gtags', 0)
   if executable('gtags-cscope') && executable(g:vim_gtags#gtags_bin)
     call vim_gtags#gtags#init()
   else

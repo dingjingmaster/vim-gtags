@@ -144,7 +144,7 @@ function! s:gtags_set_env() abort
 endfunction
 
 function! vim_gtags#gtags#init() abort
-  if exists('g:loaded_gentags#gtags') && g:loaded_gentags#gtags == 1
+  if exists('g:loaded_vim_gtags#gtags') && g:loaded_vim_gtags#gtags == 1
     return
   endif
 
@@ -201,5 +201,5 @@ function! vim_gtags#gtags#init() abort
     endif
   augroup END
 
-  let g:loaded_gentags#gtags = 1
+  let g:loaded_vim_gtags#gtags = 1
 endfunction
