@@ -165,6 +165,7 @@ function! vim_gtags#gtags#init() abort
 
     call s:gtags_set_env()
 
+	set tagstack
     set cscopetag
     set cscopeprg=gtags-cscope
 
